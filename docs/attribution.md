@@ -1,5 +1,5 @@
 The stackoverflow answer below was the inspiration for the  clocker class
-#http://stackoverflow.com/a/18101605/540028
+http://stackoverflow.com/a/18101605/540028
 
 [Backup of answer in case the link 404s]
 User:  user2631403 | answered Aug 7 '13 at 10:57
