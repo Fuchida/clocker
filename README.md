@@ -1,7 +1,7 @@
 clocker
 =======
 
-A small Python module that keeps track of elapsed time and its current state
+A small Python 3 module that keeps track of elapsed time and its current state
 
 API aerial view
 =======
