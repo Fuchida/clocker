@@ -1,7 +1,9 @@
 The stackoverflow answer below was the inspiration for the  clocker class
 http://stackoverflow.com/a/18101605/540028
 
-[Backup of answer in case the link 404s]
+Backup of answer in case the link 404s
+--------------
+
 User:  user2631403 | answered Aug 7 '13 at 10:57
 As a learning exercise for myself, I created a class to be able to create several stopwatch timer instances that you might find useful (I'm sure there are better/simpler versions around in the time modules or similar)
 
@@ -100,7 +102,8 @@ def WatchList():
 round_two_decimals() util implementation sourced from this answer
 http://stackoverflow.com/a/4519044/540028
 
-[Backup of answer in case the link 404s]
+Backup of answer in case the link 404s
+--------------
 User martineau answered Dec 23 '10 at 13:13
 
 8.833333333339or8.833333333333334properly rounded to two decimal places is8.83. Mathematically it sounds like what you want is a ceiling function. The one in Python'smathmodule is namedceil:
