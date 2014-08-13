@@ -1,7 +1,7 @@
 import time
 from util import round_two_decimals, round_three_decimals
 
-class Clocker:
+class Clocker(object):
     """The time watcher class that keeps track of elapsed time and state"""
     def __init__(self):
         self.mode = 'init'
