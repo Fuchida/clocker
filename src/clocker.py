@@ -6,7 +6,7 @@ class Clocker:
     def __init__(self):
         self.mode = 'init'
         self.startTime = 0
-        #self.elapsed will always be in floating point seconds
+        # self.elapsed will always be in floating point seconds
         self.elapsed = 0
 
     def start(self):
@@ -19,7 +19,7 @@ class Clocker:
             self.startTime = time.time()
             self.mode = 'running'
         
-        #if clocker is in any other modes, return None as no changes need to be made
+        # if clocker is in any other modes, return None as no changes need to be made
         else:
             return None
 
@@ -30,7 +30,7 @@ class Clocker:
         if self.mode == 'running':
             self.__elapsed_time()
             self.mode = 'stopped'
-        #see line 22
+        # see line 22
         else:
             return None
 
@@ -53,8 +53,8 @@ class Clocker:
         if self.mode == 'running':
             self.elapsed = time.time() - self.startTime
             return self.elapsed
-        #if the clocker is any other state then no need to update
-        #just return the current value of self.elapsed
+        # if the clocker is any other state then no need to update
+        # just return the current value of self.elapsed
         else:
             return self.elapsed
 
@@ -64,8 +64,8 @@ class Clocker:
             return round_three_decimals(self.__elapsed_time())
 
         elif self.mode == 'reset':
-            #when the mode is reset, no need to make any calculation
-            #just return the current __elapsed_time which should always be 0
+            # when the mode is reset, no need to make any calculation
+            # just return the current __elapsed_time which should always be 0
             return self.__elapsed_time()
 
         else:
@@ -77,7 +77,7 @@ class Clocker:
             return round_two_decimals(self.__elapsed_time()/60)
 
         elif self.mode == 'reset':
-            #see line 67
+            # see line 67
             return self.__elapsed_time()
 
         else:
@@ -89,7 +89,7 @@ class Clocker:
             return round_two_decimals(self.__elapsed_time()/3600)
 
         elif self.mode == 'reset':
-            #see line 67
+            # see line 67
             return self.__elapsed_time()
 
         else:
