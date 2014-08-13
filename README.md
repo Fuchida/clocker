@@ -1,4 +1,4 @@
-clocker
+clocker  [![Code Health](https://landscape.io/github/Fuchida/clocker/master/landscape.png)](https://landscape.io/github/Fuchida/clocker/master)
 =======
 
 A small Python 3 module that keeps track of elapsed time and its current state
