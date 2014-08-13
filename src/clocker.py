@@ -1,3 +1,6 @@
+"""A small Python 3 module that keeps track of elapsed time 
+and its current state"""
+
 import time
 from util import round_two_decimals, round_three_decimals
 
