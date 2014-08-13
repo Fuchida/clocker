@@ -40,7 +40,7 @@ class Clocker(object):
             self.mode = 'reset'
             self.startTime = 0
             self.elapsed = 0
-        #see line 22
+        # see line 22
         else:
             return None
 
