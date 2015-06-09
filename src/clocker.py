@@ -1,8 +1,8 @@
-"""A small Python 3 module that keeps track of elapsed time 
+"""A small Python 3 module that keeps track of elapsed time
 and its current state"""
 
 import time
-from util import round_two_decimals, round_three_decimals
+import math
 
 __version__ = '0.1'
 
@@ -24,7 +24,7 @@ class Clocker(object):
         elif self.mode == 'stopped':
             self.startTime = time.time()
             self.mode = 'running'
-        
+
         # if clocker is in any other modes, return None as no changes need to be made
         else:
             return None
@@ -42,7 +42,7 @@ class Clocker(object):
 
     def reset(self):
         """"Change the running state to reset and clear counters"""
-        if self.mode == 'running' or self.mode =='stopped':
+        if self.mode == 'running' or self.mode == 'stopped':
             self.mode = 'reset'
             self.startTime = 0
             self.elapsed = 0
@@ -52,7 +52,7 @@ class Clocker(object):
 
     def current_mode(self):
         """Return the current running mode of the clocker"""
-        return self.mode 
+        return self.mode
 
     def __elapsed_time(self):
         """updates or just returns the current elapsed time"""
@@ -67,7 +67,7 @@ class Clocker(object):
     def elapsed_seconds(self):
         """Return the current elapsed time in seconds"""
         if self.mode == 'running' or self.mode == 'stopped':
-            return round_three_decimals(self.__elapsed_time())
+            return self._round_three_decimals(self.__elapsed_time())
 
         elif self.mode == 'reset':
             # when the mode is reset, no need to make any calculation
@@ -79,8 +79,8 @@ class Clocker(object):
 
     def elapsed_minutes(self):
         """Returns the current elapsed time in minutes"""
-        if self.mode == 'running' or self.mode =='stopped':
-            return round_two_decimals(self.__elapsed_time()/60)
+        if self.mode == 'running' or self.mode == 'stopped':
+            return self._round_two_decimals(self.__elapsed_time()/60)
 
         elif self.mode == 'reset':
             # see line 67
@@ -91,8 +91,8 @@ class Clocker(object):
 
     def elapsed_hours(self):
         """Returns the current elapsed time in hours"""
-        if self.mode =='running' or self.mode == 'stopped':
-            return round_two_decimals(self.__elapsed_time()/3600)
+        if self.mode == 'running' or self.mode == 'stopped':
+            return self._round_two_decimals(self.__elapsed_time()/3600)
 
         elif self.mode == 'reset':
             # see line 67
@@ -100,3 +100,11 @@ class Clocker(object):
 
         else:
             return None
+
+    def _round_two_decimals(self, float_number):
+        """Take a floating point number and round it to two decimal places"""
+        return math.ceil(float_number*100)/100
+
+    def _round_three_decimals(self, float_number):
+        """Take a floating point number and round it to two decimal places"""
+        return math.ceil(float_number*1000)/1000
