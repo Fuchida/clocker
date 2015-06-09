@@ -4,6 +4,9 @@ and its current state"""
 import time
 from util import round_two_decimals, round_three_decimals
 
+__version__ = '0.1'
+
+
 class Clocker(object):
     """The time watcher class that keeps track of elapsed time and state"""
     def __init__(self):
