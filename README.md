@@ -3,6 +3,10 @@ clocker [![Code Health](https://landscape.io/github/Fuchida/clocker/master/lands
 
 A small Python 3 module that keeps track of elapsed time and its current state
 
+```Bash
+>> pip install clocker
+```
+
 API aerial view
 =======
 
