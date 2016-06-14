@@ -106,5 +106,5 @@ class Clocker(object):
         return math.ceil(float_number*100)/100
 
     def _round_three_decimals(self, float_number):
-        """Take a floating point number and round it to two decimal places"""
+        """Take a floating point number and round it to three decimal places"""
         return math.ceil(float_number*1000)/1000
